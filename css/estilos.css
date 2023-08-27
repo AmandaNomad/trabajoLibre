@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh; /*establece la altura minima que puede tener un elemento, 100vh es una unidad de medida que hace referencia al 2viewport height" o altura visible del navegador, esto significa que el elemento nunca sera mas corto que la altura de la ventana grafica*/
+    background-color: #525ba7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*la unidad rem "root em" em se refiere al tamaño de la fuente del elemento. la unidad rem es relativa al tamaño de fuente de raiz. ejemplo 1rem (se establece un valor igual al tamaño de fuente de raiz 16px, 1rem=16px
+el beneficio al usar rem es que, cuando se cambia el tamaño de fuente de raiz, todos los valores "rem" se ajustaran automaticamente*/
+.calculadora {
+    background-color: #0d0d0e;
+    color: #ffffff;
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem; 
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 columnas de igual tamaño */
+    gap: .5rem;
+
+}
+
+/*grid-column se utiliza para controlar el posicionamiento y el tamaño de las columnas dentro de un contenedor. especifica donde empieza y donde termina una celda o elemento dentro de la cuadricula en el eje de columnas*/
+.pantalla {
+    grid-column: 1 / 5;
+    background-color: #f0f0f5;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-family: 600;
+    overflow-x: auto
+}
+
+.btn{
+    background-color: #15173c;
+    color: #ffffff;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #090c31;
+}
+
+.pantalla {
+    color: #090c31;
+}
+
+#cero{
+    grid-column: 1 / 3; /*podemos colocar span 2, queremos que ocupen 2 columnas*/
+   
+}
+
+#igual{
+    grid-row: span 2;
+    background-color: #e6394a;
+}
+
+#igual:hover {
+    background-color: #e65766;
+}
